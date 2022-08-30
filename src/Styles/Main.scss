@@ -17,17 +17,20 @@
     font-size: .8rem;
     font-weight: bold;
     margin-top: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 .share-btn{
-    position: absolute;
-    background-color: white;
-    right: 30%;
-    top: 1.5rem;
+    margin-top: 10px;
+    display: grid;
+    flex-direction: row;
+    svg{
+        size: 50px;
+    }
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-self: center;
     padding: 5px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 50%;
+    
 }
 .all-links{
     flex: 1;
