@@ -1,5 +1,8 @@
 .main-container{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .header-title{
         flex: 1;
         margin-top: 20px;
@@ -33,7 +36,7 @@
     align-items: center;
     a{
         cursor: pointer;
-        width: 40%;
+        width: 50%;
 
         div{
             height: 2rem;
