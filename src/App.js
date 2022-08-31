@@ -1,22 +1,56 @@
 import logo from './logo.png';
 import './Styles/Main.scss';
+
 import {FiCopy} from "react-icons/fi";
 import {BsLinkedin, BsTwitter, BsWhatsapp} from "react-icons/bs";
+import {MdClose} from "react-icons/md"
+import { useState, useRef, useEffect } from 'react';
+
 
 function App() {
   //console.log('current URL 👉️', window.location.href);
+  const searchRef = useRef();
+
+  const [isCopied, setIsCopied] = useState(false);
 
   const copyToClickboard = async () => {
     await navigator.clipboard.writeText(window.location.href);
-    alert('Text copied');
+    setIsCopied(!isCopied)
+  }
+
+  useEffect(() => {
+    const closeDropdown = (event) => {
+      if(searchRef.current && !searchRef.current.contains(event.target))
+      {
+        setIsCopied(false);
+        console.log("outside")
+      }
+    };
+    document.body.addEventListener("click", closeDropdown);
+
+    return()=> document.body.removeEventListener('click', closeDropdown);
+  }, []);
+
+  const CopiedAlert = () => {
+    return(
+      <div ref={searchRef}  className={`${"modal"} ${isCopied && "active"}`}>
+        <div style={{width: 300, height: '100%', textAlign: 'center', alignItems: 'center'}}>
+          <MdClose className='close-btn' onClick={()=>setIsCopied(false)} size={20}/>
+          <div>Text Copied</div>
+        </div>
+      </div>
+    )
   }
 
   const wpLink = "whatsapp://send?text=" + window.location.href;
   const instaLink = "https://twitter.com/intent/tweet?text=Check%20out%20this%20Linktree!%20-%20" + window.location.href;
   const linkedinLink = "https://www.linkedin.com/sharing/share-offsite/?url=" + window.location.href;
+
   return (
     <div className="App">
-      <div className='main-container'>
+      <CopiedAlert isCopied={isCopied} setIsCopied={setIsCopied}/>
+
+      <div className={`${"main-container"} ${isCopied && "active"}`}>
         <div className='header-title'>
           <img alt='logo' src={logo} width={200} height={200}></img>
           <h1 className='title'>YAŞAR ÜNİVERSİTESİ MOBİL UYGULAMA GELİŞTİRME TOPLULUĞU</h1>
@@ -53,7 +87,7 @@ function App() {
           <a href={linkedinLink}>
             <BsLinkedin size="30" color='white'></BsLinkedin>
           </a>
-            <FiCopy onClick={copyToClickboard} size="30" color='white'></FiCopy>
+            <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
       </div>
       </div>
     </div>
