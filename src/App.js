@@ -19,16 +19,16 @@ function App() {
   }
 
   useEffect(() => {
-    const closeDropdown = (event) => {
+    const closeAlert = (event) => {
       if(searchRef.current && !searchRef.current.contains(event.target))
       {
         setIsCopied(false);
         console.log("outside")
       }
     };
-    document.body.addEventListener("click", closeDropdown);
+    document.body.addEventListener("click", closeAlert);
 
-    return()=> document.body.removeEventListener('click', closeDropdown);
+    return()=> document.body.removeEventListener('click', closeAlert);
   }, []);
 
   const CopiedAlert = () => {
@@ -36,7 +36,7 @@ function App() {
       <div ref={searchRef}  className={`${"modal"} ${isCopied && "active"}`}>
         <div style={{width: 300, height: '100%', textAlign: 'center', alignItems: 'center'}}>
           <MdClose className='close-btn' onClick={()=>setIsCopied(false)} size={20}/>
-          <div>Text Copied</div>
+          <div>Panoya Kopyalandı</div>
         </div>
       </div>
     )
