@@ -76,6 +76,7 @@ function Route(){
             </div>
           </a>
         </div>
+        <p>Bizi paylaş!</p>
         <div className='share-btn'>
           <a href={instaLink}>
             <BsTwitter size="30" color='white'></BsTwitter>
@@ -87,7 +88,7 @@ function Route(){
             <BsLinkedin size="30" color='white'></BsLinkedin>
           </a>
             <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
-      </div>
+        </div>
       </div>
     </div>
   );

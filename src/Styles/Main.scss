@@ -1,5 +1,10 @@
 .App {
     text-align: center;
+    color: white;
+    p{
+        height: 5%;
+        margin-bottom: -5px;
+    }
   }
 .main-container{
     text-align: center;
@@ -39,7 +44,6 @@
     gap: 10px;
     align-self: center;
     padding: 5px;
-    
 }
 .all-links{
     flex: 1;
