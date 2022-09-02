@@ -1,10 +1,6 @@
 .App {
     text-align: center;
     color: white;
-    p{
-        height: 5%;
-        margin-bottom: -5px;
-    }
   }
 .main-container{
     text-align: center;
@@ -24,6 +20,12 @@
         align-items: center;
         justify-content: space-between;
     }
+    p{
+        height: 5%;
+        margin-bottom: -18%;
+        font-size: 15px;
+        font-weight: 500;
+    }
 }
 .title{
     color: white;
@@ -34,7 +36,7 @@
     width: 300px;
 }
 .share-btn{
-    margin-top: 10px;
+    margin-top: 20%;
     display: grid;
     flex-direction: row;
     svg{
