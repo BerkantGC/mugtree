@@ -1,8 +1,24 @@
-import Route from "./Pages/Route";
+import Main from "./Pages/Main";
+import AboutUs from "./Pages/AboutUs";
+import Communicate from "./Pages/Communicate";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Routes,
+  Route, 
+  Link
+} from "react-router-dom"
 
 function App() {
   return(
-    <Route/>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main/>}/>
+        <Route path="/hakkimizda" element={<AboutUs/>}/>
+        <Route path="/iletisim" element={<Communicate/>}/>
+      </Routes>
+    </Router>
   )
 }
 

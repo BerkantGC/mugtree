@@ -1,16 +1,19 @@
 import logo from '../logo.png';
 import '../Styles/Main.scss';
 
-import {FiCopy} from "react-icons/fi";
+import {FiCopy, FiMenu} from "react-icons/fi";
+
 import {BsLinkedin, BsTwitter, BsWhatsapp} from "react-icons/bs";
 import {MdClose} from "react-icons/md"
 import { useState, useRef, useEffect } from 'react';
+import SlideMenu from '../Components/SlideMenu';
 
 function Route(){
     //console.log('current URL 👉️', window.location.href);
   const searchRef = useRef();
 
   const [isCopied, setIsCopied] = useState(false);
+  const [isMenuShown, setMenuShown] = useState(false);
 
   const copyToClickboard = async () => {
     await navigator.clipboard.writeText(window.location.href);
@@ -48,10 +51,10 @@ function Route(){
   return (
     <div className="App">
       <CopiedAlert isCopied={isCopied} setIsCopied={setIsCopied}/>
-
-      <div className={`${"main-container"} ${isCopied && "active"}`}>
+      <SlideMenu isMenuShown={isMenuShown} setMenuShown={setMenuShown} />
+      <div className={`${"main-container"} ${(isCopied || isMenuShown) && "active"}`}>
         <div className='header-title'>
-          <img alt='logo' src={logo} width={200} height={200}></img>
+          <img alt='logo' className='logo' src={logo} width={200} height={200}></img>
           <h1 className='title'>YAŞAR ÜNİVERSİTESİ MOBİL UYGULAMA GELİŞTİRME TOPLULUĞU</h1>
         </div>
         <div className='all-links'>

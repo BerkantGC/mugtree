@@ -1,0 +1,23 @@
+
+.comm-container{
+    text-align: center;
+    color: white;
+}
+.comm-main-container{
+    &.active{
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        pointer-events: none;
+    }
+}
+.each-comm{
+    display: grid;
+    grid-auto-flow: column;    
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 30%;
+    margin-right: 30%;
+    gap: .5rem;
+    font-size: 15px;
+    font-weight: bold;
+}

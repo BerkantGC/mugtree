@@ -1,0 +1,43 @@
+.slide-menu-container{
+    background-color: #291b53;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 99;
+    transition: 0.2s;
+    &.active{
+        visibility: visible;
+        width: 300px;
+        .each-navigation-container{
+            visibility: visible;
+            transition: all .2s ease-in-out; 
+            &:hover{
+                transform: scaleX(1.05);
+            }
+        }
+        .slide-menu-btn{
+            float: right;
+            margin: 10px 10px 0 0;
+        }
+    }
+    .slide-menu-btn{
+        float: left;
+        margin: 20px 0 0 20px;
+        opacity: 1;
+        transition: .2s;
+
+     }
+    .each-navigation-container{
+        background-color: white;
+        cursor: pointer;
+        visibility: hidden;
+        border-radius: 5px;
+        padding: 10px 0 10px 0;
+        margin: 10px 10px 10px 10px;
+        color: #291b53;
+       
+    }
+    
+}

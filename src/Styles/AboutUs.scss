@@ -1,0 +1,21 @@
+.about-us-container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+.about-us-main-container{
+    margin: 5%;
+    width: auto;
+    color: white;
+    overflow: scroll;
+    &.active{
+        filter: blur(5px);
+        -webkit-filter: blur(5px);
+        pointer-events: none;
+    }
+}

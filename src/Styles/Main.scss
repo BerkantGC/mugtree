@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     &.active{
         filter: blur(5px);
         -webkit-filter: blur(5px);
@@ -68,14 +69,18 @@
             color: white;
             border-style: solid;
             border-width: 1px;
+            transition: all .2s ease-in-out; 
             &:hover{
                 background-color: white;
                 color: #25296b;
+                transform: scale(1.1);
+
             }
         }
         
     }
 }
+
 .modal{
     margin: 0;
     background-color: lightblue;
@@ -94,5 +99,35 @@
     &.active{
         opacity: 1;
         z-index: 99;
+    }
+}
+.logo{
+    border-radius: 50%;
+    -webkit-animation: blink 2s linear infinite;
+    -moz-animation: blink 2s linear infinite;
+    -ms-animation: blink 2s linear infinite;
+    -o-animation: blink 2s linear infinite;
+    animation: blink 2s linear infinite;
+}
+@keyframes blink {
+    0% {
+        box-shadow: 0 0 10px lightblue;
+    }
+    50% {
+        box-shadow: none;
+    }
+    100% {
+        box-shadow: 0 0 10px lightblue;
+    }
+}
+@-webkit-keyframes blink {
+    0% {
+        box-shadow: 0 0 10px lightblue;
+    }
+    50% {
+        box-shadow: 0 0 0;
+    }
+    100% {
+        box-shadow: 0 0 10px #EC7A44;
     }
 }
