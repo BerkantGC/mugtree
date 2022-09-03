@@ -12,7 +12,7 @@
     margin: 5%;
     width: auto;
     color: white;
-    overflow: scroll;
+    overflow: auto;
     &.active{
         filter: blur(5px);
         -webkit-filter: blur(5px);
