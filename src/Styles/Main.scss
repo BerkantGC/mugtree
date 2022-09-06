@@ -22,10 +22,12 @@
         justify-content: space-between;
     }
     p{
-        height: 5%;
-        margin-bottom: -18%;
         font-size: 15px;
         font-weight: 500;
+    }
+    .share-us-title{
+        margin-top: 7%;
+        margin-bottom: -3%;
     }
 }
 .title{
@@ -34,10 +36,9 @@
     font-weight: bold;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
-    width: 300px;
+    width: 330px;
 }
 .share-btn{
-    margin-top: 20%;
     display: grid;
     flex-direction: row;
     svg{
@@ -63,7 +64,7 @@
             justify-content: center;
             align-items: center;
             font-size: 15px;
-            margin: 10px 0 10px 0;
+            margin: 7px 0 7px 0;
             border-radius: 10px;
             background-color: transparent;
             color: white;
@@ -83,7 +84,7 @@
 
 .modal{
     margin: 0;
-    background-color: lightblue;
+    background-color: white;
     position: absolute;
     top: 50%;
     left: 50%;

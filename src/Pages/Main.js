@@ -73,13 +73,20 @@ function Route(){
             Linkedin
             </div>
           </a>
+          <a target="_blank" rel="noopener noreferrer" href='https://discord.gg/HZ9fXWkasY'>
+            <div>
+            Discord
+            </div>
+          </a>
           <a target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/channel/UCgj31r8y7gOfyDh0mGJKQqQ'>
             <div>
             Youtube
             </div>
           </a>
         </div>
-        <p>Bizi paylaş!</p>
+        <div className='share-us-title'>
+          <p>Bizi paylaş!</p>
+        </div>
         <div className='share-btn'>
           <a href={instaLink}>
             <BsTwitter size="30" color='white'></BsTwitter>
