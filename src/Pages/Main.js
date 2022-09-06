@@ -1,7 +1,7 @@
 import logo from '../logo.png';
 import '../Styles/Main.scss';
 
-import {FiCopy, FiMenu} from "react-icons/fi";
+import {FiCopy} from "react-icons/fi";
 
 import {BsLinkedin, BsTwitter, BsWhatsapp} from "react-icons/bs";
 import {MdClose} from "react-icons/md"
@@ -36,7 +36,7 @@ function Route(){
   const CopiedAlert = () => {
     return(
       <div ref={searchRef}  className={`${"modal"} ${isCopied && "active"}`}>
-        <div style={{width: 300, height: '100%', textAlign: 'center', alignItems: 'center'}}>
+        <div style={{width: 300, height: '100%', textAlign: 'center', alignItems: 'center', color: 'black'}}>
           <MdClose className='close-btn' onClick={()=>setIsCopied(false)} size={20}/>
           <div>Panoya Kopyalandı</div>
         </div>
