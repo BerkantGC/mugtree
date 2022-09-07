@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import BackButton from "../Components/BackButton";
 
-import {BsDiscord, BsMailbox, BsWhatsapp} from 'react-icons/bs'
+import {BsDiscord, BsWhatsapp} from 'react-icons/bs'
 import {FiMail} from 'react-icons/fi'
 import '../Styles/Communicate.scss';
 import { useState } from "react";
@@ -19,7 +19,7 @@ const Communicate = () => {
                     <BackButton navigate={navigate}/>
             </div>
                 <h1 style={{fontSize: 35, fontWeight: 'bold'}}>BİZİMLE İLETİŞİME GEÇ</h1>
-                <div className="each-comm">
+                <div className="each-comm" style={{cursor: 'pointer'}} onClick={()=>window.location='https://discord.gg/HZ9fXWkasY'}>
                     <p>DISCORD</p>
                     <BsDiscord size={30}/>
                 </div>
