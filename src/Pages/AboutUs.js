@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom"
 import BackButton from "../Components/BackButton"
-import { HiBackspace } from "react-icons/hi";
+
 import SlideMenu from "../Components/SlideMenu";
 import { useState } from "react";
 
 import "../Styles/AboutUs.scss";
 
-export default function(){
+const AboutUs = () => {
     const navigate = useNavigate();
     const [isMenuShown, setMenuShown] = useState(false);
 
@@ -45,3 +45,5 @@ export default function(){
         </div>
     )
 }
+
+export default AboutUs;

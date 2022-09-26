@@ -25,7 +25,6 @@ function Route(){
       if(searchRef.current && !searchRef.current.contains(event.target))
       {
         setIsCopied(false);
-        console.log("outside")
       }
     };
     document.body.addEventListener("click", closeAlert);
@@ -51,12 +50,16 @@ function Route(){
   return (
     <div className="App">
       <CopiedAlert isCopied={isCopied} setIsCopied={setIsCopied}/>
+
       <SlideMenu isMenuShown={isMenuShown} setMenuShown={setMenuShown} />
+      
       <div className={`${"main-container"} ${(isCopied || isMenuShown) && "active"}`}>
+
         <div className='header-title'>
           <img alt='logo' className='logo' src={logo} width={200} height={200}></img>
           <h1 className='title'>YAŞAR ÜNİVERSİTESİ MOBİL UYGULAMA GELİŞTİRME TOPLULUĞU</h1>
         </div>
+
         <div className='all-links'>
           <a target="_blank" rel="noopener noreferrer" href='https://docs.google.com/forms/d/e/1FAIpQLSeyAfk6DE91Jce7G0C1llMBkc-rXjCbumVjOxH84Wy1vCLlFQ/viewform'>
             <div>
