@@ -73,9 +73,9 @@ function Route(){
             Linkedin
             </div>
           </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.youtube.com/channel/UCgj31r8y7gOfyDh0mGJKQqQ'>
+          <a target="_blank" rel="noopener noreferrer" href='https://discord.gg/yErKryTjb6'>
             <div>
-            Youtube
+            Discord
             </div>
           </a>
         </div>
