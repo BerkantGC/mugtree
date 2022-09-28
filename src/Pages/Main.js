@@ -56,7 +56,7 @@ function Route(){
       <div className={`${"main-container"} ${(isCopied || isMenuShown) && "active"}`}>
 
         <div className='header-title'>
-          <img alt='logo' className='logo' src={logo} width={200} height={200}></img>
+          <img alt='logo' className='logo' src={logo} width={240} height={240}></img>
           <h1 className='title'>YAŞAR ÜNİVERSİTESİ MOBİL UYGULAMA GELİŞTİRME TOPLULUĞU</h1>
         </div>
 
