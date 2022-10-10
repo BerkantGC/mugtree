@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    padding: 10px;
     &.active{
         filter: blur(5px);
         -webkit-filter: blur(5px);

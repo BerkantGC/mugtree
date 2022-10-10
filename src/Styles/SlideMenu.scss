@@ -23,11 +23,11 @@
         }
     }
     .slide-menu-btn{
+        position: sticky;
         float: left;
         margin: 20px 0 0 20px;
         opacity: 1;
         transition: .2s;
-
      }
     .each-navigation-container{
         background-color: white;
