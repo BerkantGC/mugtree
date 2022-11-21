@@ -66,6 +66,11 @@ function Route(){
             Kayıt Formu
             </div>
           </a>
+          <a target="_blank" rel="noopener noreferrer" href='https://docs.google.com/forms/d/e/1FAIpQLSeourIO9fheYgrQR-rhXwy7ZFo-ysupQR2ohSKKZy2EQbNM_g/viewform'>
+            <div>
+            React Native 101 Eğitimi Kayıt Formu
+            </div>
+          </a>
           <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/mug.yasar/'>
             <div>
             Instagram
@@ -82,9 +87,11 @@ function Route(){
             </div>
           </a>
         </div>
+
         <div className='share-us-title'>
           <p>Bizi paylaş!</p>
         </div>
+
         <div className='share-btn'>
           <a href={instaLink}>
             <BsTwitter size="30" color='white'></BsTwitter>
@@ -95,7 +102,9 @@ function Route(){
           <a href={linkedinLink}>
             <BsLinkedin size="30" color='white'></BsLinkedin>
           </a>
-            <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
+
+          <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
+          
         </div>
       </div>
     </div>

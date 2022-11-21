@@ -35,7 +35,9 @@ export default function(props){
             <div className="navigations">
                 <EachNavigation target="/" navigate={navigate} name="Ana Sayfa" />
                 <EachNavigation target="/hakkimizda" navigate={navigate} name="Hakkımızda"/>
+                <EachNavigation target="/etkinlikler" navigate={navigate} name="Etkinlikler" />
                 <EachNavigation target="/iletisim" navigate={navigate} name="İletişim" />
+
             </div>
         </div>
     )
