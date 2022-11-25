@@ -5,9 +5,9 @@ import SlideMenu from "../Components/SlideMenu";
 import { useState } from "react";
 
 import "../Styles/AboutUs.scss";
-
+ 
 const AboutUs = () => {
-    const navigate = useNavigate();
+    const navigate =  useNavigate();
     const [isMenuShown, setMenuShown] = useState(false);
 
     return(

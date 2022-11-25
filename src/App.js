@@ -7,6 +7,7 @@ import {
   Routes,
   Route, 
 } from "react-router-dom"
+import Activities from "./Pages/Activities";
 
 function App() {
   return(
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Main/>}/>
         <Route path="/hakkimizda" element={<AboutUs/>}/>
         <Route path="/iletisim" element={<Communicate/>}/>
+        <Route path="/etkinlikler" element={<Activities/>} />
       </Routes>
     </Router>
   )
