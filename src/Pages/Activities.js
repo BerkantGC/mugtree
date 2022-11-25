@@ -11,11 +11,15 @@ import 'react-slideshow-image/dist/styles.css'
 const slideImages = [
     {
       url: reactNativeCourseImage,
-      caption: 'Slide 1'
+      headerText: 'React Native 101',
+      date: "28.11.2022",
+      caption: 'Etkinlik 1'
     },
     {
       url: firstActivity,
-      caption: 'Slide 2'
+      headerText: 'Tanışma Toplantısı',
+      date: '07.10.2022',
+      caption: 'Etkinlik 2'
     },
 ];
 
@@ -49,7 +53,7 @@ export default function()
                     <Slide transitionDuration={500} >
                         {slideImages.map((slideImage, index) => 
                         (
-                                <ActivitiesCard headerText="React Native 101" image={slideImage.url} date="28.11.2022" />
+                                <ActivitiesCard headerText={slideImage.headerText} image={slideImage.url} date={slideImage.date} />
                         )
                         )}     
                     </Slide>
