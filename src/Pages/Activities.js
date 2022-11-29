@@ -5,6 +5,8 @@ import SlideMenu from "../Components/SlideMenu";
 import '../Styles/Activities.scss';
 import reactNativeCourseImage from '../Images/coursern101.jpg'
 import firstActivity from '../Images/firstActivity.jpg';
+import movieActivity from '../Images/socialnetworkmoviewithfyve.jpg';
+
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
 
@@ -16,18 +18,25 @@ const slideImages = [
       caption: 'Etkinlik 1'
     },
     {
+        url: movieActivity,
+        headerText: 'FYVE Topluluğu ile Film Etkinliği',
+        date: '30.11.2022',
+        caption : 'Etkinlik 3'
+    },
+    {
       url: firstActivity,
       headerText: 'Tanışma Toplantısı',
       date: '07.10.2022',
       caption: 'Etkinlik 2'
     },
+    
 ];
-
+//backgroundImage: `url(${props.image})`
 const ActivitiesCard = (props) => {
     console.log(props.image)
     return(
-            <div style={{backgroundImage: `url(${props.image})`, marginLeft: window.innerWidth/15, marginRight: window.innerWidth/15,
-             height: '30rem', justifyContent: 'center', alignContent: 'center', backgroundSize: 'contain',backgroundPosition : 'center' }} 
+            <div style={{backgroundImage: `url(${props.image})`, height: window.innerHeight/2,
+             justifyContent: 'center', alignContent: 'center', backgroundSize: 'cover', backgroundPosition : 'center' }} 
             className='activ_activities_card'>
                 <div className="activ_activities_card_infos">
                     <h3>{props.headerText}</h3>
@@ -49,14 +58,14 @@ export default function()
                     <div className="activ_header">
                         <h1>ETKİNLİKLERİMİZ</h1>
                     </div>
-                    <div className="activ_activities_container">
-                    <Slide transitionDuration={500} >
-                        {slideImages.map((slideImage, index) => 
-                        (
-                                <ActivitiesCard headerText={slideImage.headerText} image={slideImage.url} date={slideImage.date} />
-                        )
-                        )}     
-                    </Slide>
+                    <div className={`${window.innerWidth > 600 ? "activ_activities_container_browser" : 'activ_activities_container_mobile'}`}>
+                        <Slide transitionDuration={500} >
+                            {slideImages.map((slideImage, index) => 
+                            (
+                                    <ActivitiesCard headerText={slideImage.headerText} image={slideImage.url} date={slideImage.date} />
+                            )
+                            )}     
+                        </Slide>
                     </div>
 
                 </div>

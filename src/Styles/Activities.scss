@@ -8,12 +8,19 @@
     height: 100%;
     width: 100%;
 }
-.activ_activities_container{
-    margin: 0 10% 0 10%;
+.activ_activities_container_browser{
+    margin: 0 35% 0 35%;
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
-.activ_activities_keeper{
-    width: 100%;
-    height: 100%;
+.activ_activities_container_mobile{
+    margin: 0 10% 0 10%;
+    transition: 0.3s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .activ_header{
     display: flex;
@@ -22,12 +29,11 @@
 }
 .activ_activities_card{
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     transition: 0.3s;
     display: flex;
     align-items: flex-end;
     &:hover{
-        transform: scale(1.1);
         .activ_activities_card_infos{
             visibility: visible;
             opacity: 1;

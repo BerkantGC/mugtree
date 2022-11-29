@@ -8,6 +8,15 @@ import {MdClose} from "react-icons/md"
 import { useState, useRef, useEffect } from 'react';
 import SlideMenu from '../Components/SlideMenu';
 
+const LinkToNavigate = (props) => {
+  return(
+    <a target="_blank" rel="noopener noreferrer" href={props.link}>
+      <div>
+      {props.title}
+      </div>
+    </a>
+  )
+}
 function Route(){
     //console.log('current URL 👉️', window.location.href);
   const searchRef = useRef();
@@ -61,31 +70,16 @@ function Route(){
         </div>
 
         <div className='all-links'>
-          <a target="_blank" rel="noopener noreferrer" href='https://docs.google.com/forms/d/e/1FAIpQLSeyAfk6DE91Jce7G0C1llMBkc-rXjCbumVjOxH84Wy1vCLlFQ/viewform'>
-            <div>
-            Kayıt Formu
-            </div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://docs.google.com/forms/d/e/1FAIpQLSeourIO9fheYgrQR-rhXwy7ZFo-ysupQR2ohSKKZy2EQbNM_g/viewform'>
-            <div>
-            React Native 101 Eğitimi Kayıt Formu
-            </div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.instagram.com/mug.yasar/'>
-            <div>
-            Instagram
-            </div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/company/ya%C5%9Far-%C3%BCniversitesi-mobil-uygulama-geli%C5%9Ftirme-toplulu%C4%9Fu/'>
-            <div>
-            Linkedin
-            </div>
-          </a>
-          <a target="_blank" rel="noopener noreferrer" href='https://discord.gg/yErKryTjb6'>
-            <div>
-            Discord
-            </div>
-          </a>
+          <LinkToNavigate title='Kayıt Formu' link='https://docs.google.com/forms/d/e/1FAIpQLSeyAfk6DE91Jce7G0C1llMBkc-rXjCbumVjOxH84Wy1vCLlFQ/viewform'/>
+
+          <LinkToNavigate title='Instagram' link='https://www.instagram.com/mug.yasar/'/>
+
+          <LinkToNavigate title='Linkedin' link='https://www.linkedin.com/company/ya%C5%9Far-%C3%BCniversitesi-mobil-uygulama-geli%C5%9Ftirme-toplulu%C4%9Fu/'/>
+
+          <LinkToNavigate title='Discord' link='https://discord.gg/yErKryTjb6'/>
+          
+          <LinkToNavigate title='Youtube' link='https://www.youtube.com/channel/UCgj31r8y7gOfyDh0mGJKQqQ'/>
+
         </div>
 
         <div className='share-us-title'>
