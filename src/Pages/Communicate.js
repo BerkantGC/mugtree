@@ -23,11 +23,11 @@ const Communicate = () => {
                     <p>DISCORD</p>
                     <BsDiscord size={30}/>
                 </div>
-                <div className="each-comm">
+                <div className="each-comm" style={{cursor: 'pointer'}} onClick={()=>window.location='https://chat.whatsapp.com/Fv4QGCwFMHD6bkrOBV0JNO'}>
                     <p>WHATSAPP</p>
                     <BsWhatsapp size={30}/>
                 </div>
-                <div className="each-comm">
+                <div className="each-comm" style={{cursor: 'pointer'}} onClick={()=>window.location='mailto:mobiluygulamagelistirme@stu.yasar.edu.tr'}>
                     <p>MAIL</p>
                     <FiMail size={30}/>
                 </div>
