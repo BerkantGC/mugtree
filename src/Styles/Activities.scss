@@ -10,17 +10,9 @@
 }
 .activ_activities_container_browser{
     margin: 0 35% 0 35%;
-    transition: 0.3s;
-    &:hover {
-        transform: scale(1.05);
-    }
 }
 .activ_activities_container_mobile{
     margin: 0 10% 0 10%;
-    transition: 0.3s;
-    &:hover {
-        transform: scale(1.05);
-    }
 }
 .activ_header{
     display: flex;
