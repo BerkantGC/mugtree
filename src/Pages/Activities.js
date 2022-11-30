@@ -7,6 +7,8 @@ import reactNativeCourseImage from '../Images/coursern101.jpg'
 import firstActivity from '../Images/firstActivity.jpg';
 import movieActivity from '../Images/socialnetworkmoviewithfyve.jpg';
 
+import BackButton from "../Components/BackButton";
+
 import { Slide } from "react-slideshow-image";
 import 'react-slideshow-image/dist/styles.css'
 
@@ -53,6 +55,9 @@ export default function()
     return(
         <div className="activ_container">
             <SlideMenu isMenuShown={isMenuShown} setMenuShown={setMenuShown} navigate={navigate}/>
+            <div style={{display: 'flex', justifyContent: "center"}}>
+                    <BackButton navigate={navigate}/>
+            </div>
             <div className="activ_main_container">
                 <div className="activ_main_keeper">
                     <div className="activ_header">
