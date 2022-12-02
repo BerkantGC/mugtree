@@ -17,6 +17,17 @@ const LinkToNavigate = (props) => {
     </a>
   )
 }
+
+const LinkToShare = (props) => {
+  const Logo = props.Platform;
+
+  return(
+    <a href={props.link}>
+            <Logo size="30" color='white'></Logo>
+    </a>
+  )
+}
+
 function Route(){
     //console.log('current URL 👉️', window.location.href);
   const searchRef = useRef();
@@ -53,9 +64,24 @@ function Route(){
   }
 
   const wpLink = "whatsapp://send?text=" + window.location.href;
-  const instaLink = "https://twitter.com/intent/tweet?text=Check%20out%20this%20Linktree!%20-%20" + window.location.href;
+  const twitterLink = "https://twitter.com/intent/tweet?text=Check%20out%20this%20Linktree!%20-%20" + window.location.href;
   const linkedinLink = "https://www.linkedin.com/sharing/share-offsite/?url=" + window.location.href;
 
+  const ShareLinks = [
+    {
+      link: twitterLink,
+      Platform: BsTwitter
+    },
+    {
+      link: wpLink,
+      Platform: BsWhatsapp
+    },
+    {
+      link: linkedinLink,
+      Platform: BsLinkedin
+    }
+  ]
+  
   return (
     <div className="App">
       <CopiedAlert isCopied={isCopied} setIsCopied={setIsCopied}/>
@@ -89,18 +115,10 @@ function Route(){
         </div>
 
         <div className='share-btn'>
-          <a href={instaLink}>
-            <BsTwitter size="30" color='white'></BsTwitter>
-          </a>
-          <a href={wpLink} data-action="share/whatsapp/share">
-            <BsWhatsapp size="30" color='white'></BsWhatsapp>
-          </a>
-          <a href={linkedinLink}>
-            <BsLinkedin size="30" color='white'></BsLinkedin>
-          </a>
+          
+          {ShareLinks.map(item => <LinkToShare link={item.link} Platform={item.Platform} />)}
 
           <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
-          
         </div>
       </div>
     </div>
