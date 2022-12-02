@@ -91,9 +91,7 @@ function Route(){
       <div className={`${"main-container"} ${(isCopied || isMenuShown) && "active"}`}>
 
         <div className='header-title'>
-          <div style={{marginTop: 10}}>
-            <img alt='logo' className='logo' src={logo} style={{height: window.innerHeight/3, objectFit: 'cover'}} />
-          </div>
+          <img alt='logo' className='logo' src={logo} style={{height: window.innerHeight/3, objectFit: 'cover'}} />
           <h1 className='title'>YAŞAR ÜNİVERSİTESİ MOBİL UYGULAMA GELİŞTİRME TOPLULUĞU</h1>
         </div>
 
@@ -115,7 +113,7 @@ function Route(){
         </div>
 
         <div className='share-btn'>
-          
+
           {ShareLinks.map(item => <LinkToShare link={item.link} Platform={item.Platform} />)}
 
           <FiCopy onClick={copyToClickboard} style={{cursor: 'pointer'}} size="30" color='white'></FiCopy>
