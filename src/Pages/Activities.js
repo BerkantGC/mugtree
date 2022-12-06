@@ -6,6 +6,7 @@ import '../Styles/Activities.scss';
 import reactNativeCourseImage from '../Images/coursern101.jpg'
 import firstActivity from '../Images/firstActivity.jpg';
 import movieActivity from '../Images/socialnetworkmoviewithfyve.jpg';
+import paintballMUG from '../Images/paintballMUG.jpeg';
 
 import BackButton from "../Components/BackButton";
 
@@ -30,6 +31,12 @@ const slideImages = [
       headerText: 'Tanışma Toplantısı',
       date: '07.10.2022',
       caption: 'Etkinlik 2'
+    },
+    {
+      url: paintballMUG,
+      headerText: 'Paintball',
+      date: '03.12.2022',
+      caption: 'Etkinlik 4'
     },
     
 ];
