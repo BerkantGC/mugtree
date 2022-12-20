@@ -7,6 +7,8 @@ import reactNativeCourseImage from '../Images/coursern101.jpg'
 import firstActivity from '../Images/firstActivity.jpg';
 import movieActivity from '../Images/socialnetworkmoviewithfyve.jpg';
 import paintballMUG from '../Images/paintballMUG.jpeg';
+import unityCourse from '../Images/courseunity101.png';
+import interviewCeng from '../Images/interviewceng.png';
 
 import BackButton from "../Components/BackButton";
 
@@ -38,14 +40,26 @@ const slideImages = [
       date: '03.12.2022',
       caption: 'Etkinlik 4'
     },
+    {
+      url: unityCourse,
+      headerText: 'Unity 101',
+      date: '16.12.2022',
+      caption: 'Etkinlik 5'
+    },
+    {
+      url: interviewCeng,
+      headerText: "İzmir'de Bilgisayar Mühendisliği Okumak",
+      date: '17.12.2022',
+      caption: 'Etkinlik 6'
+    },
     
 ];
 //backgroundImage: `url(${props.image})`
 const ActivitiesCard = (props) => {
     console.log(props.image)
     return(
-            <div style={{backgroundImage: `url(${props.image})`, height: window.innerHeight/2,
-             justifyContent: 'center', alignContent: 'center', backgroundSize: 'cover', backgroundPosition : 'center' }} 
+            <div style={{backgroundImage: `url(${props.image})`, height: window.innerHeight/1.5,
+             justifyContent: 'center', alignContent: 'center', backgroundSize: 'contain', backgroundPosition : 'center' }} 
             className='activ_activities_card'>
                 <div className="activ_activities_card_infos">
                     <h3>{props.headerText}</h3>
